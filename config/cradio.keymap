@@ -39,6 +39,27 @@
             #binding-cells = <0>;
             bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
         };
+
+        email: email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp M &kp I &kp C &kp H &kp A &kp E &kp L &kp DOT &kp T &kp U &kp P &kp P &kp E &kp R &kp AT &kp C &kp R &kp O &kp W &kp D &kp S &kp T &kp R &kp I &kp K &kp E &kp DOT &kp C &kp O &kp M>;
+            label = "EMAIL";
+        };
+
+        patt: patt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp P &kp A &kp T &kp T &kp E &kp R &kp N &kp EQUAL>;
+            label = "PATT";
+        };
+
+        inst: inst {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp I &kp N &kp S &kp T &kp A &kp N &kp C &kp E &kp EQUAL>;
+            label = "INST";
+        };
     };
 
     combos {
@@ -98,10 +119,10 @@
 
         ext_layer {
             bindings = <
-&kp ESC    &trans     &trans      &trans     &trans       &kp PG_UP     &kp HOME  &kp UP    &kp END    &kp CAPS
-&sk LALT   &sk LGUI   &sk LSHIFT  &sk LCTRL  &kp RALT     &kp PG_DN     &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL
-&kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp TAB    &kp LC(V)    &kp LC(BSPC)  &kp BSPC  &trans    &trans     &trans
-                                  &trans     &kp LCTRL    &kp ENTER     &mo FNC
+&kp ESC    &trans     &trans      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &kp PG_UP     &kp HOME  &kp UP    &kp END    &kp CAPS
+&sk LALT   &sk LGUI   &sk LSHIFT  &sk LCTRL          &kp RALT           &kp PG_DN     &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL
+&kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp TAB            &kp LC(V)          &kp LC(BSPC)  &kp BSPC  &patt     &inst      &email
+                                  &trans             &kp LCTRL          &kp ENTER     &mo FNC
             >;
         };
 
