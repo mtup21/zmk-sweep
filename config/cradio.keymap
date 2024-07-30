@@ -33,7 +33,7 @@
 				// sometimes my device thinks a modifier is being held down
 				// pressing all modifiers fixes it.
 				unstick: unstick {
-					label = "ZM_unstick1";
+					label = "ZM_unstick";
 					compatible = "zmk,behavior-macro";
 					#binding-cells = <0>;
 					bindings
